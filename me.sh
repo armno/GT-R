@@ -43,9 +43,38 @@ read e
 # 3. Make Vim default editor
 echo ""
 echo "I know you hate Nano. Let's make Vim default."
-editor-select
+select-editor
 echo ""
-echo "Next step: Installing Zsh"
+echo "Next step:"
+read e
+
+# 4. Make and ugly Vim more beautiful
+# should skip this step if there are already Lucius and .vimrc installed
+luciusPath="~/.vim/colors/lucius.vim"
+vimRcPath="~/.vimrc"
+
+echo "Your Vim looks ugly. Here comes Lucius"
+if [ -f $luciusPath ]
+then
+  echo "lucius.vim is already existed in your .vim directory. Skipping fetching the file ..."
+else
+	mkdir -p ~/.vim/colors
+  wget --no-check-certificate https://raw.github.com/armno/dotfiles/master/.vim/colors/lucius.vim -O $luciusPath
+	echo "lucius.vim is downloaded at $luciusPath"
+fi
+
+echo ""
+if [ -f $vimPath ]
+then
+  echo "Your .vimrc is already existed. Skipping fetching the file ..."
+else
+  wget --no-check-certificate https://raw.github.com/armno/dotfiles/master/.vimrc -O ~/.vimrc
+  source ~/.vimrc
+fi
+
+echo ""
+echo "Your Vim looks fantastic with .vimrc and Lucius theme"
+echo "Next?"
 read e
 
 # 4. Installing Zsh
