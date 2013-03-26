@@ -81,12 +81,12 @@ else
 	echo "Installing oh-my-zsh ..."
 	sudo apt-get install -y zsh >> $logFile
 	wget -q --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O -- | sh >> $logFile
-	
-# make zsh defaul shell. forget about bash
-	echo "Making Zsh the default shell ..."
-	chsh -s `which zsh`
-	echo "Zsh is now your default shell ..."
 fi
+
+# make zsh defaul shell. forget about bash
+echo "Making Zsh the default shell ..."
+chsh -s `which zsh`
+echo "Zsh is now your default shell ..."
 
 # 5. LAMP Stack -- install using `tasksel` for Apache2, PHP5, and MySQL
 echo "Next, LAMP stack for PHP and MySQL web development. I am firing up tasksel ..."
