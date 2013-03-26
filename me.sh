@@ -90,10 +90,7 @@ fi
 
 # 5. LAMP Stack -- install using `tasksel` for Apache2, PHP5, and MySQL
 echo "Next, LAMP stack for PHP and MySQL web development. I am firing up tasksel ..."
-if ! type tasksel >> $logFile
-	then
-	sudo apt-get install tasksel >> $logFile
-fi
+sudo apt-get install tasksel >> $logFile
 sudo tasksel
 
 # 6. PhpMyAdmin for managing MySQL databases
