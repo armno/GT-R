@@ -110,6 +110,13 @@ sudo a2enmod rewrite ssl >> $logFile
 echo "Installing cURL and cURL extension for PHP"
 sudo apt-get install curl php5-curl >> $logFile
 
+# 9. Install Sublime Text 2
+echo "And your favorite editor, Sublime Text 2 ..."
+sudo add-apt-repository ppa:webupd8team/sublime-text-2
+echo "Added new apt repository. Installing Sublime Text 2"
+sudo apt-get update >> $logFile
+sudo apt-get install sublime-text >> $logFile
+
 echo "I think that's it for now. See you soon!"
 
 exit 0
