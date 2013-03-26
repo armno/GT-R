@@ -37,7 +37,7 @@ echo "Next step: Installing some cool shits ..."
 
 # 2. Install Git and Vim
 echo "Installing your favorite tools: Git, Vim, and tasksel"
-sudo apt-get install git vim tasksel >> $logFile
+sudo apt-get install -y git vim tasksel >> $logFile
 echo "Installed Git, Vim, and tasksel"
 
 # 3. Make Vim default editor
@@ -79,7 +79,7 @@ if type zsh >> $logFile
 	echo "Zsh is already installed on your machine. Boo!"
 else
 	echo "Installing oh-my-zsh ..."
-	sudo apt-get install zsh >> $logFile
+	sudo apt-get install -y zsh >> $logFile
 	wget -q --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O -- | sh >> $logFile
 	
 # make zsh defaul shell. forget about bash
@@ -90,12 +90,12 @@ fi
 
 # 5. LAMP Stack -- install using `tasksel` for Apache2, PHP5, and MySQL
 echo "Next, LAMP stack for PHP and MySQL web development. I am firing up tasksel ..."
-sudo apt-get install tasksel >> $logFile
+# sudo apt-get install tasksel >> $logFile
 sudo tasksel
 
 # 6. PhpMyAdmin for managing MySQL databases
 echo "Also, you will need phpMyAdmin for managing MySQL databases ..."
-sudo apt-get install phpmyadmin >> $logFile
+sudo apt-get install -y phpmyadmin >> $logFile
 
 # 7. Enable mod_rewrite and mod_ssl for Apache
 echo "Enabling mod_rewrite and mod_ssl for Apache"
@@ -103,14 +103,14 @@ sudo a2enmod rewrite ssl >> $logFile
 
 # 8. Install curl and php5-curl driver
 echo "Installing cURL and cURL extension for PHP"
-sudo apt-get install php5-curl >> $logFile
+sudo apt-get install -y php5-curl >> $logFile
 
 # 9. Install Sublime Text 2
 echo "And your favorite editor, Sublime Text 2 ..."
 sudo add-apt-repository ppa:webupd8team/sublime-text-2
 echo "Added new apt repository. Installing Sublime Text 2"
 sudo apt-get update >> $logFile
-sudo apt-get install sublime-text >> $logFile
+sudo apt-get install -y sublime-text >> $logFile
 
 # 10. Ruby and friends
 echo "Installing RVM ..."
