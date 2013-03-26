@@ -18,8 +18,6 @@ echo ""
 #echo "4. Install zsh"
 #echo "5. Install your zsh theme (wow!)"
 #echo ""
-echo "If you are ready, press Enter."
-read e
 
 # 0. will dump all outputs into a log file
 logFile="install.log"
@@ -43,9 +41,9 @@ sudo apt-get install git vim >> $logFile
 echo "Installed Git and Vim."
 
 # 3. Make Vim default editor
-echo "I know you hate Nano. Let's make Vim default."
-echo "SELECT NUMBER 3, THEN YOUR LIFE WILL BE EASIER"
-select-editor
+#echo "I know you hate Nano. Let's make Vim default."
+#echo "SELECT NUMBER 3, THEN YOUR LIFE WILL BE EASIER"
+#select-editor
 
 # 4. Make and ugly Vim more beautiful
 # should skip this step if there are already Lucius and .vimrc installed
