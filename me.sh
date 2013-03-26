@@ -129,7 +129,7 @@ echo "Installed Sass, Compass, Jekll, Rdiscount, and Sinatra Gems"
 
 # Finish up
 echo ""
-echo "I think that is it for now. Go ahead and download Google Chrome https://www.google.com/intl/en/chrome/browser/ and Droid Sans Mono font https://www.google.com/intl/en/chrome/browser/"
+echo "I think that is it for now. Do not forget Google Chrome and Droid Sans Mono font for coding"
 echo ""
 echo "See you soon! Bye!"
 
