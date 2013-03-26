@@ -108,7 +108,7 @@ sudo a2enmod rewrite ssl >> $logFile
 
 # 8. Install curl and php5-curl driver
 echo "Installing cURL and cURL extension for PHP"
-sudo apt-get install curl php5-curl >> $logFile
+sudo apt-get install php5-curl >> $logFile
 
 # 9. Install Sublime Text 2
 echo "And your favorite editor, Sublime Text 2 ..."
@@ -124,7 +124,7 @@ curl -s -L https://get.rvm.io | bash -s stable --rails --autolibs=enabled >> $lo
 
 ## Gems I use
 echo "Installing Gems you like"
-gem install sass compass jekyll rdiscount sinatra >> $logFile
+gem install --no-verbose sass compass jekyll rdiscount sinatra >> $logFile
 echo "Installed Sass, Compass, Jekll, Rdiscount, and Sinatra Gems"
 
 # Finish up
