@@ -31,7 +31,7 @@ fi
 
 # 1. Update all packages
 echo "Updating your packages ..."
-sudo apt-get update >> $logFile && sudo apt-get upgrade >> $logFile
+sudo apt-get update >> $logFile && sudo apt-get -y upgrade >> $logFile
 echo "All packages are up-to-date. You might need to restart your computer and run this script again :P"
 echo "Next step: Installing some cool shits ..."
 
