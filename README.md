@@ -13,3 +13,6 @@ $ curl -L https://raw.github.com/armno/GT-R/master/me.sh | sh
 ```
 
 -A
+
+### Changelog
+- March 26, 2013 initial release
