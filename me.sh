@@ -95,7 +95,7 @@ sudo tasksel
 
 # 6. PhpMyAdmin for managing MySQL databases
 echo "Also, you will need phpMyAdmin for managing MySQL databases ..."
-sudo apt-get install -y phpmyadmin >> $logFile
+sudo apt-get install phpmyadmin
 
 # 7. Enable mod_rewrite and mod_ssl for Apache
 echo "Enabling mod_rewrite and mod_ssl for Apache"
