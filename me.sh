@@ -33,12 +33,12 @@ fi
 echo "Updating your packages ..."
 sudo apt-get update >> $logFile && sudo apt-get upgrade >> $logFile
 echo "All packages are up-to-date. You might need to restart your computer and run this script again :P"
-echo "Next step: Installing Git and Vim ..."
+echo "Next step: Installing some cool shits ..."
 
 # 2. Install Git and Vim
-echo "Installing your favorite tools: Git and Vim"
-sudo apt-get install git vim >> $logFile
-echo "Installed Git and Vim."
+echo "Installing your favorite tools: Git, Vim, and tasksel"
+sudo apt-get install git vim tasksel >> $logFile
+echo "Installed Git, Vim, and tasksel"
 
 # 3. Make Vim default editor
 #echo "I know you hate Nano. Let's make Vim default."
