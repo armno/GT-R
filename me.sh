@@ -110,7 +110,7 @@ echo "And your favorite editor, Sublime Text 2 ..."
 sudo add-apt-repository ppa:webupd8team/sublime-text-2
 echo "Added new apt repository. Installing Sublime Text 2"
 sudo apt-get update >> $logFile
-sudo apt-get install -y sublime-text >> $logFile
+sudo apt-get install -y -qq sublime-text >> $logFile
 
 # 10. Ruby and friends
 echo "Installing RVM ..."
