@@ -20,24 +20,24 @@ echo ""
 #echo ""
 
 # 0. will dump all outputs into a log file
-logFile="install.log"
-echo "Creating a log file $logFile ..."
-if [ ! -f $logFile ]
-	then
-	touch $logFile
-else
-  echo "$logFile already exists. I will append logs to this file."
-fi
+#logFile="install.log"
+#echo "Creating a log file $logFile ..."
+#if [ ! -f $logFile ]
+#	then
+#	touch $logFile
+#else
+#  echo "$logFile already exists. I will append logs to this file."
+#fi
 
 # 1. Update all packages
 echo "Updating your packages ..."
-sudo apt-get update >> $logFile && sudo apt-get -y upgrade >> $logFile
+sudo apt-get update && sudo apt-get -y upgrade
 echo "All packages are up-to-date. You might need to restart your computer and run this script again :P"
 echo "Next step: Installing some cool shits ..."
 
 # 2. Install Git and Vim
 echo "Installing your favorite tools: Git, Vim, and tasksel"
-sudo apt-get install -y git vim tasksel >> $logFile
+sudo apt-get install -y git vim tasksel
 echo "Installed Git, Vim, and tasksel"
 
 # 3. Make Vim default editor
@@ -55,7 +55,7 @@ if [ -f $luciusPath ]
 then
   echo "lucius.vim is already existed in your .vim directory. Skipping fetching the file ..."
 else
-	mkdir -p $HOME/.vim/colors/ >> $logFile
+	mkdir -p $HOME/.vim/colors/
   wget -q --no-check-certificate https://raw.github.com/armno/dotfiles/master/.vim/colors/lucius.vim -O $luciusPath
 	echo "lucius.vim is downloaded at $luciusPath"
 fi
@@ -74,13 +74,13 @@ echo "Your Vim looks fantastic with .vimrc and Lucius theme"
 echo "I will make your terminal AWESOME with Zsh."
 
 # check if zsh is already installed
-if type zsh >> $logFile
+if type zsh
 	then
 	echo "Zsh is already installed on your machine. Boo!"
 else
 	echo "Installing oh-my-zsh ..."
-	sudo apt-get install -y zsh >> $logFile
-	wget -q --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O -- | sh >> $logFile
+	sudo apt-get install -y zsh
+	wget -q --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O -- | sh
 fi
 
 # make zsh defaul shell. forget about bash
@@ -99,27 +99,27 @@ sudo apt-get install -qq phpmyadmin
 
 # 7. Enable mod_rewrite and mod_ssl for Apache
 echo "Enabling mod_rewrite and mod_ssl for Apache"
-sudo a2enmod rewrite ssl >> $logFile
+sudo a2enmod rewrite ssl
 
 # 8. Install curl and php5-curl driver
 echo "Installing cURL and cURL extension for PHP"
-sudo apt-get install -y php5-curl >> $logFile
+sudo apt-get install -y php5-curl
 
 # 9. Install Sublime Text 2
 echo "And your favorite editor, Sublime Text 2 ..."
 sudo add-apt-repository ppa:webupd8team/sublime-text-2
 echo "Added new apt repository. Installing Sublime Text 2"
-sudo apt-get update >> $logFile
-sudo apt-get install -y -qq sublime-text >> $logFile
+sudo apt-get update
+sudo apt-get install -y -qq sublime-text
 
 # 10. Ruby and friends
 echo "Installing RVM ..."
 echo "Warning: this can take ages. Go grab some coffee ..."
-curl -s -L https://get.rvm.io | bash -s stable --rails --autolibs=enabled >> $logFile
+curl -s -L https://get.rvm.io | bash -s stable --rails --autolibs=enabled
 
 ## Gems I use
 echo "Installing Gems you like"
-gem install --no-verbose sass compass jekyll rdiscount sinatra >> $logFile
+gem install --no-verbose sass compass jekyll rdiscount sinatra
 echo "Installed Sass, Compass, Jekll, Rdiscount, and Sinatra Gems"
 
 # Finish up
