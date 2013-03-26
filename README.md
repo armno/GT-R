@@ -15,7 +15,7 @@ $ sudo apt-get install curl
 then
 
 ```sh
-$ curl -L https://raw.github.com/armno/GT-R/master/me.sh | sh
+$ curl -L https://raw.github.com/armno/GT-R/master/me.sh | bash
 ```
 
 -A
