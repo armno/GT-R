@@ -128,9 +128,6 @@ gem install sass compass jekyll rdiscount sinatra >> $logFile
 echo "Installed Sass, Compass, Jekll, Rdiscount, and Sinatra Gems"
 
 # Finish up
-echo ""
-echo "I think that is it for now. Do not forget Google Chrome and Droid Sans Mono font for coding"
-echo ""
-echo "See you soon! Bye!"
+echo "Finished work for the lazy."
 
 exit 0
