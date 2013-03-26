@@ -120,7 +120,7 @@ sudo apt-get install sublime-text >> $logFile
 # 10. Ruby and friends
 echo "Installing RVM ..."
 echo "Warning: this can take ages. Go grab some coffee ..."
-curl -sL https://get.rvm.io | bash -s stable --rails --autolibs=enabled >> $logFile
+curl -s -L https://get.rvm.io | bash -s stable --rails --autolibs=enabled >> $logFile
 
 ## Gems I use
 echo "Installing Gems you like"
