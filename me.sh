@@ -117,6 +117,20 @@ echo "Added new apt repository. Installing Sublime Text 2"
 sudo apt-get update >> $logFile
 sudo apt-get install sublime-text >> $logFile
 
-echo "I think that's it for now. See you soon!"
+# 10. Ruby and friends
+echo "Installing RVM ..."
+echo "Warning: this can take ages. Go grab some coffee ..."
+curl -L https://get.rvm.io | bash -s stable --rails --autolibs=enabled >> $logFile
+
+## Gems I use
+echo "Installing Gems you like"
+gem install sass compass jekyll rdiscount sinatra >> $logFile
+echo "Installed Sass, Compass, Jekll, Rdiscount, and Sinatra Gems"
+
+# Finish up
+echo ""
+echo "I think that's it for now. Go ahead and download Google Chrome https://www.google.com/intl/en/chrome/browser/ and Droid Sans Mono font https://www.google.com/intl/en/chrome/browser/"
+echo ""
+echo "See you soon! Bye!"
 
 exit 0
