@@ -6,7 +6,9 @@ After installed Ubuntu, run this script, everything I need is there. Don't need 
 
 ## Usage
 
-```
+In terminal, of course:
+
+```sh
 $ curl -L https://raw.github.com/armno/GT-R/master/me.sh | sh
 ```
 
