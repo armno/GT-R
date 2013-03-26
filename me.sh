@@ -80,17 +80,26 @@ read e
 # 4. Installing Zsh
 echo ""
 echo "I will make your terminal AWESOME with Zsh."
-sudo apt-get install zsh
-echo ""
-echo "Installing oh-my-zsh ..."
-echo ""
-wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O -- | sh
-echo ""
-echo "Making Zsh the default shell ..."
-echo ""
-chsh -s `which zsh`
-echo ""
-echo "Zsh is now your default shell ..."
-echo ""
+
+# check if zsh is already installed
+if type zsh >/dev/null 2>&1
+	then
+	echo "Zsh is already installed on your machine. Boo!"
+else
+	echo ""
+	echo "Installing oh-my-zsh ..."
+	echo ""
+	sudo apt-get install zsh
+	wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O -- | sh
+	
+# make zsh defaul shell. forget about bash
+	echo ""
+	echo "Making Zsh the default shell ..."
+	echo ""
+	chsh -s `which zsh`
+	echo ""
+	echo "Zsh is now your default shell ..."
+	echo ""
+fi
 
 exit 0
