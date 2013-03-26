@@ -90,6 +90,26 @@ else
 	echo "Zsh is now your default shell ..."
 fi
 
+# 5. LAMP Stack -- install using `tasksel` for Apache2, PHP5, and MySQL
+echo "Next, LAMP stack for PHP and MySQL web development. I am firing up tasksel ..."
+if ! type tasksel >> $logFile
+	then
+	sudo apt-get install tasksel >> $logFile
+fi
+sudo tasksel
+
+# 6. PhpMyAdmin for managing MySQL databases
+echo "Also, you will need phpMyAdmin for managing MySQL databases ..."
+sudo apt-get install phpmyadmin >> $logFile
+
+# 7. Enable mod_rewrite and mod_ssl for Apache
+echo "Enabling mod_rewrite and mod_ssl for Apache"
+sudo a2enmod rewrite ssl >> $logFile
+
+# 8. Install curl and php5-curl driver
+echo "Installing cURL and cURL extension for PHP"
+sudo apt-get install curl php5-curl >> $logFile
+
 echo "I think that's it for now. See you soon!"
 
 exit 0
