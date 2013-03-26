@@ -84,7 +84,7 @@ else
 	
 # make zsh defaul shell. forget about bash
 	echo "Making Zsh the default shell ..."
-	chsh -s `which zsh` >> $logFile
+	chsh -s `which zsh`
 	echo "Zsh is now your default shell ..."
 fi
 
