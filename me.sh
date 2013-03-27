@@ -112,6 +112,12 @@ echo "Added new apt repository. Installing Sublime Text 2"
 sudo apt-get update
 sudo apt-get install -y -qq sublime-text
 
+# Naturalscrolling on Laptop
+echo "Natural Scrolling: make your Ubuntu more like Mac"
+sudo add-apt-repository ppa:zedtux/naturalscrolling
+sudo apt-get update
+sudo apt-get install naturalscrolling-testing
+
 # 10. Ruby and friends
 #echo "Installing RVM ..."
 #echo "Warning: this can take ages. Go grab some coffee ..."
