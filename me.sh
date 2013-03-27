@@ -118,6 +118,11 @@ sudo add-apt-repository ppa:zedtux/naturalscrolling
 sudo apt-get update
 sudo apt-get install naturalscrolling-testing
 
+echo "Solarizing your terminal"
+git clone https://github.com/sigurdga/gnome-terminal-colors-solarized.git solarized
+cd solarized
+./set_dark.sh
+
 # 10. Ruby and friends
 #echo "Installing RVM ..."
 #echo "Warning: this can take ages. Go grab some coffee ..."
