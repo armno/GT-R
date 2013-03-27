@@ -95,7 +95,7 @@ sudo tasksel
 
 # 6. PhpMyAdmin for managing MySQL databases
 echo "Also, you will need phpMyAdmin for managing MySQL databases ..."
-sudo apt-get install -qq phpmyadmin
+sudo apt-get install -y phpmyadmin
 
 # 7. Enable mod_rewrite and mod_ssl for Apache
 echo "Enabling mod_rewrite and mod_ssl for Apache"
@@ -110,13 +110,13 @@ echo "And your favorite editor, Sublime Text 2 ..."
 sudo add-apt-repository ppa:webupd8team/sublime-text-2
 echo "Added new apt repository. Installing Sublime Text 2"
 sudo apt-get update
-sudo apt-get install -y -qq sublime-text
+sudo apt-get install -y sublime-text
 
 # Naturalscrolling on Laptop
 echo "Natural Scrolling: make your Ubuntu more like Mac"
 sudo add-apt-repository ppa:zedtux/naturalscrolling
 sudo apt-get update
-sudo apt-get install naturalscrolling-testing
+sudo apt-get install -y naturalscrolling-testing
 
 echo "Solarizing your terminal"
 git clone https://github.com/sigurdga/gnome-terminal-colors-solarized.git solarized
@@ -128,7 +128,7 @@ cd solarized
 #echo "Warning: this can take ages. Go grab some coffee ..."
 #curl -s -L https://get.rvm.io | bash -s stable --rails --autolibs=enabled
 echo "Installing ruby"
-sudo apt-get install ruby1.9.3
+sudo apt-get install -y ruby1.9.3
 
 ## Gems I use
 echo "Installing Gems you like"
