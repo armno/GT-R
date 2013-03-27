@@ -113,13 +113,15 @@ sudo apt-get update
 sudo apt-get install -y -qq sublime-text
 
 # 10. Ruby and friends
-echo "Installing RVM ..."
-echo "Warning: this can take ages. Go grab some coffee ..."
-curl -s -L https://get.rvm.io | bash -s stable --rails --autolibs=enabled
+#echo "Installing RVM ..."
+#echo "Warning: this can take ages. Go grab some coffee ..."
+#curl -s -L https://get.rvm.io | bash -s stable --rails --autolibs=enabled
+echo "Installing ruby"
+sudo apt-get install ruby1.9.3
 
 ## Gems I use
 echo "Installing Gems you like"
-gem install --no-verbose sass compass jekyll rdiscount sinatra
+sudo gem install --no-verbose sass compass jekyll rdiscount sinatra
 echo "Installed Sass, Compass, Jekll, Rdiscount, and Sinatra Gems"
 
 # Finish up
