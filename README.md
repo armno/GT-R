@@ -22,3 +22,4 @@ $ curl -L https://raw.github.com/armno/GT-R/master/me.sh | bash
 
 ### Changelog
 - March 26, 2013 initial release
+- June 21, 2013 temporarily removed installing Ruby. should be using RVM.
