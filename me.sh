@@ -113,10 +113,12 @@ sudo apt-get update
 sudo apt-get install -y sublime-text
 
 # Naturalscrolling on Laptop
-echo "Natural Scrolling: make your Ubuntu more like Mac"
-sudo add-apt-repository ppa:zedtux/naturalscrolling
-sudo apt-get update
-sudo apt-get install -y naturalscrolling-testing
+# NOTE: Natural Scrolling is shipped with 13.04. Skip installing this.
+
+# echo "Natural Scrolling: make your Ubuntu more like Mac"
+# sudo add-apt-repository ppa:zedtux/naturalscrolling
+# sudo apt-get update
+# sudo apt-get install -y naturalscrolling-testing
 
 echo "Solarizing your terminal"
 git clone https://github.com/sigurdga/gnome-terminal-colors-solarized.git solarized
@@ -124,16 +126,16 @@ cd solarized
 ./set_dark.sh
 
 # 10. Ruby and friends
-#echo "Installing RVM ..."
-#echo "Warning: this can take ages. Go grab some coffee ..."
-#curl -s -L https://get.rvm.io | bash -s stable --rails --autolibs=enabled
-echo "Installing ruby"
-sudo apt-get install -y ruby1.9.3
+# echo "Installing RVM ..."
+# echo "Warning: this can take ages. Go grab some coffee ..."
+# curl -s -L https://get.rvm.io | bash -s stable --rails --autolibs=enabled
+# echo "Installing ruby"
+# sudo apt-get install -y ruby1.9.3
 
 ## Gems I use
-echo "Installing Gems you like"
-sudo gem install --no-verbose sass compass jekyll rdiscount sinatra
-echo "Installed Sass, Compass, Jekll, Rdiscount, and Sinatra Gems"
+# echo "Installing Gems you like"
+# sudo gem install --no-verbose sass compass jekyll rdiscount sinatra
+# echo "Installed Sass, Compass, Jekll, Rdiscount, and Sinatra Gems"
 
 # Finish up
 echo "Finished work for the lazy."
